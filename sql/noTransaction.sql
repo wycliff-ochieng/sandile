@@ -33,4 +33,4 @@ Write a solution to find the IDs of the users who visited without making any tra
 
 SELECT customer_id,COUNT(visit_id) AS transaction_count 
 FROM Visits v LEFT JOIN transactions t ON v.visit_id = t.visit_id 
-WHERE transaction_id IS NULL GROUP BY 1
+WHERE transaction_id IS NULL GROUP BY 1 ORDER BY 2;
